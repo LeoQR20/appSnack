@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="82384e95edaa4a2cbd1df61e7f239d11" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Bill" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Order" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Payment" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Product" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.User" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoSnacksModel.FK_Bill_Order1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoSnacksModel.FK_Bill_Payment1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoSnacksModel.FK_Order_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoSnacksModel.Order_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
