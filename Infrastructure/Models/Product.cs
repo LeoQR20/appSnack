@@ -17,14 +17,15 @@ namespace Infrastructure.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Orders = new HashSet<Order>();
+            this.Order_Product = new HashSet<Order_Product>();
         }
     
         public int ID { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order_Product> Order_Product { get; set; }
     }
 }

@@ -18,16 +18,20 @@ namespace Infrastructure.Models
         public Order()
         {
             this.Bills = new HashSet<Bill>();
-            this.Products = new HashSet<Product>();
+            this.Order_Product = new HashSet<Order_Product>();
         }
     
         public int ID { get; set; }
         public int UserID { get; set; }
+        public int Taxes { get; set; }
+        public int Total { get; set; }
+        public int SubTotal { get; set; }
+        public int Discount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
-        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Order_Product> Order_Product { get; set; }
+        public virtual User User { get; set; }
     }
 }

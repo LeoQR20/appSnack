@@ -10,5 +10,6 @@ namespace Core.Services
     public interface IServiceProduct
     {
         IEnumerable<Product> GetProducts();
+        Product GetProductByID(int id);
     }
 }

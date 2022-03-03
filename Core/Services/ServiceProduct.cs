@@ -11,25 +11,7 @@ namespace Core.Services
 {
     public class ServiceProduct : IServiceProduct
     {
-        //public List<Product> GetProductsAll()
-        //{
-        //    List<Product> products = null;
-        //    try
-        //    {
-        //        using (ProyectoSnacksEntities context = new ProyectoSnacksEntities())
-        //        {
-        //            context.Configuration.LazyLoadingEnabled = false;
-        //            products = context.Products.ToList();
-        //        }
-        //        return products;
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
-        public IEnumerable<Product> GetProducts()
+            public IEnumerable<Product> GetProducts()
         {
             IRepositoryProduct repository = new ReporsitoryProduct();
             return repository.GetProducts();

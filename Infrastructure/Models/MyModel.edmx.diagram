@@ -4,17 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="82384e95edaa4a2cbd1df61e7f239d11" Name="Diagram1">
-        <EntityTypeShape EntityType="ProyectoSnacksModel.Bill" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoSnacksModel.Order" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoSnacksModel.Payment" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoSnacksModel.Product" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoSnacksModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoSnacksModel.User" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+      <Diagram DiagramId="a878bcebf06d4ad28b2cc22d9b544125" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Bill" Width="1.5" PointX="6.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Order" Width="1.5" PointX="9.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Order_Product" Width="1.5" PointX="8.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Payment" Width="1.5" PointX="4.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.Product" Width="1.5" PointX="10.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoSnacksModel.User" Width="1.5" PointX="7" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="ProyectoSnacksModel.FK_Bill_Order1" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoSnacksModel.FK_Bill_Payment1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoSnacksModel.FK_Order_Product_Order1" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoSnacksModel.FK_Order_User1" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoSnacksModel.Order_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoSnacksModel.FK_Order_Product_Product" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
