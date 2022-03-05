@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Infrastructure.Models.Product>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="Glass" style="text-transform: none !important;">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="container body-content">
+
+            <div class="row" id="product">
+
+                <div style="border-radius: 50px; background: #e0e0e0; box-shadow: 9px 9px 18px #b3b3b3, -9px -9px 18px #ffffff;">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Description)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Price) colones </p>
+                        <div class="col-4 col-sm-4 col-md-4">
+
+                            @Ajax.ActionLink("Add to cart",
+                                  "ordenarProducto",
+                                  "Product",
+                                  new
+                                  {
+                                      idProduct = item.ID
+                                  },
+                                  new AjaxOptions
+                                  {
+                                      UpdateTargetId = "cantidadReservas",
+                                      InsertionMode = InsertionMode.Replace,
+                                      HttpMethod = "GET",
+                                  }, new { @class = "btn btn-danger" }
+                                  )
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="bg-dark">
+
+        </div>
+    }
+
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryajax")
+}

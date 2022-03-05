@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web.ViewModel;
 
 namespace Snack.Controllers
 {
@@ -21,6 +22,39 @@ namespace Snack.Controllers
                 return View(lista);
             }
             catch (Exception )
+            {
+                throw;
+            }
+        }
+        public ActionResult ordenarProducto(int? idProduct)
+        {
+            int cantidadCasas = Carrito.Instancia.Product.Count();
+            ViewBag.NotiCarrito = Carrito.Instancia.AgregarItem((int)idProduct);
+            return PartialView("_OrdenCantidad");
+        }
+        public ActionResult carrito()
+        {
+
+            if (TempData.ContainsKey("NotificationMessage"))
+            {
+                ViewBag.NotificationMessage = TempData["NotificationMessage"];
+            }
+
+            ViewBag.DetalleOrden = Carrito.Instancia.Product;
+
+            return View();
+        }
+        public ActionResult Menu()
+        {
+            IEnumerable<Product> lista = null;
+            try
+            {
+                IServiceProduct _serviceProduct = new ServiceProduct();
+                lista = _serviceProduct.GetProducts();
+                ViewBag.title = "Lista Productos";
+                return View(lista);
+            }
+            catch (Exception)
             {
                 throw;
             }

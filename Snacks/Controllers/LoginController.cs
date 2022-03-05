@@ -29,7 +29,7 @@ namespace Snack.Controllers
                     Session["User"] = user;
                     if (user.Accredited == 1)
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Menu", "Product");
                     }
                     else
                     {

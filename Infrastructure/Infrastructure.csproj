@@ -87,6 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepositoryProduct.cs" />
     <Compile Include="Repository\ReporsitoryProduct.cs" />
+    <Compile Include="Utils\SweetAlertHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

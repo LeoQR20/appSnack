@@ -1,0 +1,12 @@
+﻿@{int cantidadReservas = Web.ViewModel.Carrito.Instancia.GetCountItems(); }
+
+<a href="@Url.Action("carrito", "Reserva")" class="nav-link" style="font-size:large; color:#0d4456">
+    Pendiente <span class="badge bg-danger">@cantidadReservas</span>
+</a>
+
+@if (@ViewBag.NotiCarrito != null)
+{
+    <script>
+            @Html.Raw(@ViewBag.NotiCarrito);
+    </script>
+}
